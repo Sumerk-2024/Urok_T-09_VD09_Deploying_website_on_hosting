@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block content %}
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Кликер!</h1>
+        <p class="lead">Количество кликов - {{ current_user.clicks }}</p>
+        <form action="{{ url_for('click') }}" method="post">
+            <button type="submit" class="btn btn-primary btn-lg">Кнопка</button>
+        </form>
+    </div>
+{% endblock %}
